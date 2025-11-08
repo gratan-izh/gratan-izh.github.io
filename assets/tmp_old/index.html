@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ООО «ГРАТАН» — стройматериалы: контакты, цены, реквизиты</title>
+<meta name="description" content="ООО «ГРАТАН». Ассортимент стройматериалов, контакты, график работы, реквизиты. Актуальные цены и прайс-лист (PDF/XLSX)." />
+<meta name="format-detection" content="telephone=no" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f9fc;
+    --fg:#0f172a;
+    --muted:#64748b;
+    --ring:#cfe1ff;               /* светло-голубая обводка в цвет кнопок */
+    --ring-strong:#7ab0ff;        /* для фокуса/ховера */
+    --shadow:0 10px 26px rgba(2,8,23,.08);
+    --shadow-soft:0 6px 16px rgba(2,8,23,.06);
+    --blue:#2563eb;
+    --cyan:#06b6d4;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font: 16px/1.55 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans",sans-serif;
+    color:var(--fg);background:var(--bg);
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:24px}
+
+  /* Header (без изменений визуальной структуры) */
+  .header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--ring);box-shadow:0 2px 10px rgba(2,8,23,.04)}
+  .header .inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 24px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .badge{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:800;
+         background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 8px 20px rgba(13,42,148,.18)}
+  nav a{margin-left:18px;font-size:14px;color:#334155}
+  nav a:hover{opacity:.85}
+  .work-badge{font-size:14px;padding:8px 14px;border-radius:999px;background:#eef6ff;color:#0f172a;
+              border:1px solid var(--ring);box-shadow:var(--shadow-soft)}
+
+  .call-btn,.btn-primary{display:inline-flex;align-items:center;gap:10px;font-weight:800;border-radius:12px;padding:12px 18px;
+              color:#fff;background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 14px 30px rgba(2,8,23,.20)}
+  .btn-outline{display:inline-flex;align-items:center;gap:10px;font-weight:700;border-radius:12px;padding:12px 18px;
+              background:#fff;color:var(--fg);border:1px solid var(--ring);box-shadow:var(--shadow-soft)}
+  .call-btn:hover,.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(2,8,23,.28)}
+  .btn-outline:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(2,8,23,.12);border-color:var(--ring-strong)}
+
+  /* Hero с фоном — НЕ меняем структуру */
+  .hero{position:relative;color:#fff;border-radius:16px;margin-top:18px;overflow:hidden;min-height:360px}
+  .hero::before{content:'';position:absolute;inset:0;background:url('hero.jpg') center/cover no-repeat;filter:brightness(.68)}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(2,6,23,.45),rgba(2,6,23,.6))}
+  .hero .inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;padding:40px 28px}
+  .hero h1{margin:0 0 10px;font-size:40px;line-height:1.1}
+  .lead{color:rgba(255,255,255,.96);max-width:720px}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+
+  /* Карточки и блоки — только стилистические правки */
+  .contact-card,.ibox,.card,.pdfwrap{
+    background:#fff;border:1px solid var(--ring);border-radius:14px;box-shadow:var(--shadow)
+  }
+  .contact-card{padding:16px 20px;display:flex;flex-direction:column;gap:12px;width:360px;max-width:100%;align-self:start;color:var(--fg)!important;transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+  .contact-card:hover{transform:translateY(-1px);border-color:var(--ring-strong);box-shadow:0 14px 32px rgba(2,8,23,.12)}
+  .contact-row{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:10px 12px;border:1px solid var(--ring);border-radius:10px;background:#f8fafc;margin-top:10px;transition:background-color .15s ease,box-shadow .15s ease,transform .15s ease,border-color .18s ease}
+  .contact-row:hover{background:#eef6ff;box-shadow:0 8px 16px rgba(2,8,23,.08);transform:translateY(-1px);border-color:var(--ring-strong)}
+
+  .muted{color:var(--muted);font-size:13px}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,#cbd5e1,transparent);margin:18px 0}
+  .section h2{margin:0 0 10px;font-size:26px}
+
+  .catgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  @media (max-width:1024px){.hero .inner{grid-template-columns:1fr}.catgrid{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:640px){.catgrid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:30px}}
+  .card{overflow:hidden;transition:transform .15s ease, box-shadow .15s ease}
+  .card:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(2,8,23,.12)}
+  .thumb{height:120px;background:#e2e8f0;background-size:cover;background-position:center}
+  .label{padding:10px 12px;font-weight:800}
+  .linkcard{cursor:pointer;position:relative}
+  .linkcard:focus-visible{outline:3px solid #93c5fd;outline-offset:2px}
+
+  .pdfwrap{overflow:hidden;height:78vh;min-height:520px}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .ibox{padding:18px}
+  .ibox h3{margin:0 0 10px;font-size:18px}
+  .kv{display:grid;grid-template-columns:180px 1fr;gap:10px}
+  ul.clean{margin:8px 0 0;padding-left:18px}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="inner wrap">
+    <a class="brand" href="#top" aria-label="На главную">
+      <div class="badge">P</div>
+      <div>
+        <div style="font-weight:900">ООО «ГРАТАН»</div>
+        <div style="font-size:12px; color:#64748b">Официальная страница</div>
+      </div>
+    </a>
+    <nav aria-label="Основное меню">
+      <a href="#about">О компании</a>
+      <a href="#catalog">Ассортимент и цены</a>
+      <a href="#price">Прайс</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#reqs">Реквизиты</a>
+    </nav>
+    <div class="work-badge">Работаем Пн–Пт 09:00–18:00</div>
+    <a href="tel:+79225248641" class="call-btn">Позвонить</a>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <!-- HERO (фон hero.jpg сохраняется) -->
+  <section class="hero" aria-label="Главный блок">
+    <div class="inner">
+      <div>
+        <h1>Стройматериалы и комплектующие — ООО «ГРАТАН»</h1>
+        <p class="lead">Ассортимент и актуальные цены — прямо на странице. Прайс доступен в форматах PDF и XLSX. Звоните и пишите — ответим оперативно.</p>
+        <div class="btns">
+          <a href="#catalog" class="btn-primary">Смотреть цены</a>
+          <a href="#contacts" class="btn-outline">Связаться</a>
+          <a href="pikom_price_20251010_043858.pdf" class="btn-outline" download>Скачать прайс (PDF)</a>
+          <a href="price.xlsx" class="btn-outline" download>Скачать прайс (XLSX)</a>
+        </div>
+      </div>
+      <!-- Быстрые контакты (компакт) -->
+      <div class="contact-card" role="group" aria-label="Быстрые контакты">
+        <div class="muted">Быстрые контакты</div>
+        <div class="contact-row"><div class="muted">Телефон</div><div style="font-weight:900"><a href="tel:+79225248641">+7 922 524-86-41</a></div></div>
+        <div class="contact-row"><div class="muted">E‑mail</div><div style="font-weight:900"><a href="mailto:Gratan.izh@mail.ru">Gratan.izh@mail.ru</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- О КОМПАНИИ -->
+  <section id="about" class="section" aria-labelledby="h2-about">
+    <h2 id="h2-about">О компании</h2>
+    <div class="grid-2">
+      <div class="ibox">
+        <p>ООО «ГРАТАН» — поставщик, нацеленный на долгосрочное сотрудничество. Мы придерживаемся прозрачных условий, оперативно обрабатываем запросы и поддерживаем актуальность ассортимента и цен.</p>
+        <p>По всем вопросам вы можете связаться с нами по телефону или электронной почте — ответим в рабочее время.</p>
+      </div>
+      <div class="ibox">
+        <h3>Основные данные</h3>
+        <div class="kv">
+          <div class="muted">Полное наименование</div><div>Общество с ограниченной ответственностью ООО «ГРАТАН»</div>
+          <div class="muted">Юридический адрес</div><div>427002, Удмуртская Республика, м.о. Завьяловский район, с. Гольяны, ул. Труда, д. 9</div>
+          <div class="muted">ИНН / КПП</div><div>1800001975 / 180001001</div>
+          <div class="muted">ОГРН</div><div>1231800012256 (от 07.07.2023)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- КАТАЛОГ -->
+  <section id="catalog" class="section" aria-labelledby="h2-catalog">
+    <h2 id="h2-catalog">Ассортимент и цены</h2>
+    <div class="btns" style="margin-bottom: 10px">
+      <a href="pikom_price_20251010_043858.pdf" class="btn-outline" download>Скачать прайс (PDF)</a>
+      <a href="price.xlsx" class="btn-outline" download>Скачать прайс (XLSX)</a>
+    </div>
+    <div class="catgrid">
+      <article class="card linkcard" data-page="1"><div class="thumb" style="background-image:url('cat_profile.jpg')"></div><div class="label">Профиль</div></article>
+      <article class="card linkcard" data-page="1"><div class="thumb" style="background-image:url('cat_gkl.jpg')"></div><div class="label">ГКЛ / ГВЛ</div></article>
+      <article class="card linkcard" data-page="1"><div class="thumb" style="background-image:url('cat_mixes.jpg')"></div><div class="label">Сухие смеси</div></article>
+      <article class="card linkcard" data-page="4"><div class="thumb" style="background-image:url('cat_roof.jpg')"></div><div class="label">Кровля</div></article>
+      <article class="card linkcard" data-page="3"><div class="thumb" style="background-image:url('cat_insulation_rolls.jpg')"></div><div class="label">Утеплитель (рулонный)</div></article>
+      <article class="card linkcard" data-page="3"><div class="thumb" style="background-image:url('cat_boards.jpg')"></div><div class="label">Плиты утеплителя</div></article>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ПРАЙС -->
+  <section id="price" class="section" aria-labelledby="h2-price">
+    <h2 id="h2-price">Прайс</h2>
+    <div class="pdfwrap">
+      <div id="pdfHost" style="width:100%;height:100%;"></div>
+    </div>
+    <p class="muted">Если документ не отображается, воспользуйтесь кнопками скачивания выше.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- КОНТАКТЫ + ГРАФИК -->
+  <section id="contacts" class="section" aria-labelledby="h2-contacts">
+    <h2 id="h2-contacts">Контакты</h2>
+    <div class="grid-2">
+      <div class="ibox">
+        <h3>Контакты</h3>
+        <p class="muted">Свяжитесь любым удобным способом — ответим оперативно.</p>
+        <div class="contact-row"><div class="muted">Телефон</div><div style="font-weight:900"><a href="tel:+79225248641">+7 922 524-86-41</a></div></div>
+        <div class="contact-row"><div class="muted">E‑mail</div><div style="font-weight:900"><a href="mailto:Gratan.izh@mail.ru">Gratan.izh@mail.ru</a></div></div>
+      </div>
+      <div class="ibox">
+        <h3>График работы</h3>
+        <p>Пн–Пт: 09:00–18:00 (Мск+2), Сб–Вс: выходной</p>
+        <p class="muted">Заказы, поступившие вне рабочего времени, обрабатываются в ближайший рабочий день.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- РЕКВИЗИТЫ + ОПЛАТА/ДОКИ -->
+  <section id="reqs" class="section" aria-labelledby="h2-reqs">
+    <h2 id="h2-reqs">Реквизиты</h2>
+    <div class="grid-2">
+      <div class="ibox">
+        <h3>Реквизиты</h3>
+        <div class="kv">
+          <div class="muted">Получатель</div><div>ООО «ГРАТАН»</div>
+          <div class="muted">Банк</div><div>АО «Датабанк»</div>
+          <div class="muted">р/с</div><div>407028100054100005350</div>
+          <div class="muted">к/с</div><div>30101810000000000201</div>
+          <div class="muted">БИК</div><div>044525201</div>
+          <div class="muted">Директор</div><div>Брызгалов Кирилл Валерьевич</div>
+        </div>
+        <p style="margin:14px 0 0">
+          <a class="btn-outline" href="scan_20251001120247.pdf" download>Скачать карту партнёра (PDF)</a>
+        </p>
+      </div>
+      <div class="ibox">
+        <h3>Оплата и документы</h3>
+        <ul class="clean">
+          <li>Счёт и закрывающие документы предоставляются по запросу.</li>
+          <li>Безналичный расчёт на основании выставленного счёта.</li>
+          <li>Доставка и условия — по согласованию с менеджером.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap" style="text-align:center; color:#64748b; padding: 32px 0;">
+  © <span id="year"></span> ООО «ГРАТАН». Все права защищены.
+</footer>
+
+<script>
+  // устойчивый просмотр PDF с переключением по карточкам
+  (function(){
+    const PDF = "pikom_price_20251010_043858.pdf";
+    const host = document.getElementById('pdfHost');
+    function render(page){
+      const src = PDF + "?v=1#page=" + page + "&view=FitH";
+      host.innerHTML = '<embed src="'+src+'" type="application/pdf" width="100%" height="100%">' +
+                       '<iframe src="'+src+'" width="100%" height="100%"></iframe>';
+    }
+    render(1);
+    function openPricePage(page){
+      render(page);
+      document.getElementById('h2-price').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+    document.querySelectorAll('.linkcard[data-page]').forEach(card=>{
+      card.addEventListener('click',()=>openPricePage(card.dataset.page));
+      card.addEventListener('keydown',e=>{
+        if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openPricePage(card.dataset.page); }
+      });
+      card.setAttribute('tabindex','0');
+      card.setAttribute('role','button');
+      const titleEl = card.querySelector('.label');
+      card.setAttribute('aria-label','Открыть прайс: '+(titleEl?titleEl.textContent.trim():'раздел'));
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
