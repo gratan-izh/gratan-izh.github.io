@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ООО «ГРАТАН» — официальный сайт</title>
+  <meta name="description" content="ООО «ГРАТАН». Прайс, каталог, реквизиты, контакты.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container head">
+    <div class="brand">
+      <img src="assets/img/logo_gratan.svg" alt="Логотип" class="logo-icon" width="22" height="22">
+      <div class="brand-text">
+        <div class="name">ООО «ГРАТАН»</div>
+        <div class="sub">Официальная страница</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#price">Прайс</a>
+      <a href="#contacts">Контакты/Реквизиты</a>
+      </nav>
+    <div class="hours">Работаем Пн–Пт 09:00–18:00</div>
+    <a class="btn call" href="tel:+79225248641">Позвонить</a>
+  </div>
+  <div class="hero" style="background-image: url('assets/images/cat_profile.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <h1>Стройматериалы и комплектующие — ООО «ГРАТАН»</h1>
+      <p class="lead">Работаем по всей России. Прайс доступен в PDF и XLSX. Условия заказа и доставки — индивидуально.</p>
+      <div class="actions">
+        <a class="btn primary" href="#catalog">Смотреть цены</a>
+        <a class="btn" href="mailto:Gratan.izh@mail.ru">Связаться</a>
+        <a class="btn outline" href="gratan_price.pdf" download="gratan_price.pdf">Скачать прайс (PDF)</a>
+        <a class='btn outline' href='gratan_price.xlsx' download='gratan_price.xlsx'>Скачать прайс (XLSX)</a>
+      </div>
+      <div class="quick">
+        <div><span>Телефон</span><b><a href="tel:+79225248641">+7 922 524-86-41</a></b></div>
+        <div><span>E‑mail</span><b><a href="mailto:Gratan.izh@mail.ru">Gratan.izh@mail.ru</a></b></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about" class="container">
+  <h2>О компании</h2>
+  <p>ООО «ГРАТАН» — поставщик строительных материалов. Мы нацелены на долгосрочное сотрудничество, придерживаемся прозрачных условий, оперативно обрабатываем запросы и поддерживаем актуальность ассортимента и цен.</p>
+  <p>По всем вопросам свяжитесь с нами по телефону или электронной почте — ответим в рабочее время.</p>
+</section>
+
+<section id="catalog" class="container">
+  <h2>Каталог</h2>
+  <div id="group-grid" class="grid">
+    <a data-page="1" class="tile" href="gratan_price.pdf#page=1&view=FitH" data-search="ГКЛ"><img loading="lazy" src="assets/images/cat_gkl.jpg" alt="ГКЛ"><div class="name">ГКЛ</div></a>
+    <a data-page="4" class="tile" href="gratan_price.pdf#page=4&view=FitH" data-search="КРОВЛЯ"><img loading="lazy" src="assets/images/cat_roof.jpg" alt="КРОВЛЯ"><div class="name">КРОВЛЯ</div></a>
+    <a data-page="2" class="tile" href="gratan_price.pdf#page=2&view=FitH" data-search="ПЛИТЫ УТЕПЛИТЕЛЯ"><img loading="lazy" src="assets/images/cat_boards.jpg" alt="ПЛИТЫ УТЕПЛИТЕЛЯ"><div class="name">ПЛИТЫ УТЕПЛИТЕЛЯ</div></a>
+    <a data-page="1" class="tile" href="gratan_price.pdf#page=1&view=FitH" data-search="ПРОФИЛЬ"><img loading="lazy" src="assets/images/cat_profile.jpg" alt="ПРОФИЛЬ"><div class="name">ПРОФИЛЬ</div></a>
+    <a data-page="1" class="tile" href="gratan_price.pdf#page=1&view=FitH" data-search="СУХИЕ СМЕСИ"><img loading="lazy" src="assets/images/cat_mixes.jpg" alt="СУХИЕ СМЕСИ"><div class="name">СУХИЕ СМЕСИ</div></a>
+    <a data-page="4" class="tile" href="gratan_price.pdf#page=4&view=FitH" data-search="УТЕПЛИТЕЛЬ"><img loading="lazy" src="assets/images/cat_insulation_rolls.jpg" alt="УТЕПЛИТЕЛЬ"><div class="name">УТЕПЛИТЕЛЬ</div></a>
+  </div>
+</section>
+
+<section id="price" class="container">
+  <h2>Прайс</h2>
+  <div class="pdf-toolbar">
+    <button id="btn-prev" class="btn tiny" type="button">◀</button>
+    <button id="btn-next" class="btn tiny" type="button">▶</button>
+    <button id="btn-map" class="btn tiny outline" type="button">⚙ Настроить соответствия</button>
+    <div class="spacer"></div>
+    <a class="btn outline" href="gratan_price.pdf" download="gratan_price.pdf">Скачать PDF</a>
+    <a class='btn outline' href='gratan_price.xlsx' download='gratan_price.xlsx'>Скачать XLSX</a>
+  </div>
+  <object id="pdf-view" name="viewer" data="gratan_price.pdf#page=1&view=FitH" type="application/pdf" class="pdf-view"></object>
+  <div class="hint">Если документ не отобразился, воспользуйтесь кнопками скачивания выше.</div>
+</section>
+
+<section id="contacts" class="container">
+  <h2>Контакты</h2>
+  <div class="cards">
+    <div class="card"><div class="k">Телефон</div><div class="v"><a href="tel:+79225248641">+7 922 524-86-41</a></div></div>
+    <div class="card"><div class="k">E‑mail</div><div class="v"><a href="mailto:Gratan.izh@mail.ru">Gratan.izh@mail.ru</a></div></div>
+  </div>
+</section>
+
+<section id="details" class="container">
+  <h2>Реквизиты</h2>
+  <div class="cards two">
+    <div class="card">
+      <div class="kv"><span>Полное наименование</span><b>Общество с ограниченной ответственностью ООО «ГРАТАН»</b></div>
+      <div class="kv"><span>Юридический адрес</span><b>427002 Удмуртская Республика, м.о Завьяловский район, с. Гольяны, ул. Труда, д.9</b></div>
+      <div class="kv"><span>ИНН / КПП</span><b>1800041512 / 180001001</b></div>
+      <div class="kv"><span>ОГРН</span><b>1251800012507</b></div>
+    </div>
+    <div class="card">
+      <div class="kv"><span>Банк</span><b>АО «Датабанк»</b></div>
+      <div class="kv"><span>БИК</span><b>049401871</b></div>
+      <div class="kv"><span>р/с</span><b>40702810502000057414</b></div>
+      <div class="kv"><span>к/с</span><b>30101810900000000871</b></div>
+      <div class="kv"><span>Директор</span><b>Брызгалов Кирилл Валерьевич</b></div>
+      <div class="kv"><span>Карточка предприятия</span><b><a href="assets/docs/gratan_company_card.pdf" download>Скачать (PDF)</a></b></div>
+    </div>
+  </div>
+</section>
+
+<div id="map-modal" class="map-modal" hidden>
+  <div class="map-modal__backdrop"></div>
+  <div class="map-modal__dialog">
+    <h3>Настройка соответствий категорий страницам прайса</h3>
+    <p class="small">Укажите номер страницы PDF для каждой категории. Эти данные сохранятся в этом браузере.</p>
+    <form id="map-form"></form>
+    <div class="map-modal__actions">
+      <button type="button" id="map-cancel" class="btn outline tiny">Отмена</button>
+      <button type="submit" id="map-save" class="btn tiny">Сохранить</button>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer class="container small">© ООО «ГРАТАН»</footer>
+
+<script>
+window.__COVERS__ = {"ПРОФИЛЬ": "assets/images/cat_profile.jpg", "ГКЛ": "assets/images/cat_gkl.jpg", "СУХИЕ СМЕСИ": "assets/images/cat_mixes.jpg", "КРОВЛЯ": "assets/images/cat_roof.jpg", "УТЕПЛИТЕЛЬ": "assets/images/cat_insulation_rolls.jpg", "ПЛИТЫ УТЕПЛИТЕЛЯ": "assets/images/cat_boards.jpg"};
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>
